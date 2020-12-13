@@ -1,0 +1,95 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[letterpaper, left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,setspace}  	 
+\setstretch{1.25}
+\usepackage{enumerate,enumitem}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=blue!20,draw,inner sep=2pt] (char) {#1};}}
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+\renewcommand\maketitlehooka{\vspace{0ex}}
+\renewcommand\maketitlehookb{\vspace{-4ex}}
+\renewcommand\maketitlehookc{\vspace{-3ex}}
+
+\title{Effective naming style for files and folders}
+\author{Behzad Nouri}
+\date{\today}
+
+\graphicspath{{./img/}}
+\begin{document}
+\maketitle
+%\tableofcontents
+%\vspace*{2\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Prelude}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+After years of research and writing different reports, my digital storage is filled with "countless" folders and files. Even though I have been consistently spending time and effort to keep my archive "organized,"  still, looking for a specific folder/file in this colossal archive sometimes becomes  frustrating. 
+
+One straightforward way to avoid this hassle is good naming conventions for files and folders. It would be significantly effective if one could follow particular style for naming from the beginning. Something that young researchers may need to keep in mind from the early stage of their research for the years to come. The gain will be obvious. You will save time in seeking for the files and folders. Also, you will save yourself from the burden of rewriting a report, re-collecting data, etc. while entire time you think that you have done a similar (or same) task before but now you can not locate/access it.
+
+ The followings are a collection of rules that I called "\emph{Best naming style for files/folders}." But being realistic, the best is that you (1) decide a meaningful system of your liking (using others' experience like this one is always wise) (2) use it from the beginning (3) and stick to it loyally and consistently. 
+ %A sign that it is working for you is that if you decided a name for a folder/file with a given content today, an then the time comes in the future, you want to name a folder/file with the similar contents you can end up with the name close enough with the one you are using today.
+ 
+ \newpage
+ \section{File \& Folder Naming}
+ \begin{enumerate}[label=\protect\circled{\arabic*}]
+
+\item \textbf{Use a name representative of doc's content:}\\
+Assigning a name to a document is adequate when the reading alone of the name is enough to identify the
+content without needing to open the file. \vspace*{-0.7\baselineskip}
+\begin{center}{\textbf{Best to know from the name about the content without opening it.}}\end{center}
+
+\item \textbf{Keep names short and relevant:}
+\begin{itemize}
+    \item It must include a minimum number of words enough to identify the document well without having to lengthen its name unduly.
+    \item Use common abbreviations, such as:\\
+    \begin{tabular}{ll p{1cm}ll p{1cm}ll}
+    \textbf{PRJ}& Project  &&  \textbf{TeX}& LaTeX           && \textbf{RPT}& Report \\
+    \textbf{PLN}& Plan     &&  \textbf{AGD}& Agenda          && \textbf{MIN}& Minute \\
+    \textbf{ELEC}& Electrical   && \textbf{ENG}& Engineering && \textbf{FRM}& From \\
+    \textbf{ENGL}& English  && \textbf{ELEC}& Electrical      &&    &\\
+    \end{tabular}
+\end{itemize}
+
+\item \textbf{Be descriptive when naming:}\\
+\noindent If possible
+\begin{itemize}
+    \item Enough to identify the content 
+    \item Add date to the name
+    \item If using a date, use the format YYYYMMDD,\\
+    e.g., LNA-Design-Report-20201211-v01
+\end{itemize}
+
+\item \textbf{Use Title Casing (Capital first letter of every word)}\\
+E.g.: Field-Study-Report-Draft
+
+\item \textbf{Include version number in the name by the use of “v” as:}\\
+E.g.: CktTheory-19920129-v03
+
+\item \textbf{Use either "space" or hyphen "-" to separate the parts:}
+\begin{itemize}
+    \item First of all, no special characters (", $\#$, /, \textbackslash, $\vert$, +, !, etc.) or characters reserved for the Windows environment (;~/~?, :, @, =, \&)
+    \item Avoid the use of diacritics (accents and punctuation)
+    \item Avoid the use of complete sentence
+    \item Avoid the use of the, a, an, my, mine, and, or, etc. as they do not add more meaning but take up space unnecessarily
+    \item In specific, MATLAB has issue with - in m-file name and ! in directory name.
+    \item In specific, Hspice faces issue if there is any "[" "]" is there in the folder name / in the path of current dir.
+    \item Note: CMD (DOS) script is fragile in handling "space" charter, when needed use "-" character instead of "space"
+\end{itemize}
+
+\item \textbf{For enumerating the files and folders use two digit numbers:}\\
+e.g.: Include a leading zero for numbers 0-9. As: 01, 02, $\dots$
+
+\item \textbf{To add the name, add the family name first and then the initial of the first name:}\\
+e.g.,  NouriB-Efficient Ckt Sim-TCAS-II-20201211-v01
+
+\item \textbf{Do not exceed total of 260 character count for the path}\\
+E.g. the following character count should be less than 260 characters \par
+"Drive:\textbackslash folder\textbackslash folder\textbackslash... \textbackslash file-nmae"
+
+\end{enumerate}
+ 
+
+\end{document}
